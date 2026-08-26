@@ -99,7 +99,7 @@
 
 
     <!-- =====================================================
-         CUSTOM HEADER / LOGO / FOOTER CSS
+         CUSTOM HEADER / LOGO / FOOTER / PORTFOLIO CSS
     ====================================================== -->
 
     <style>
@@ -603,6 +603,55 @@
 
 
         /* =====================================================
+           PORTFOLIO / PROJECTS EQUAL SIZE FIX
+        ===================================================== */
+
+        .portfolio-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: stretch;
+
+            flex-wrap: wrap;
+
+            gap: 2.5rem;
+
+        }
+
+
+        .portfolio-box {
+
+            flex: 1 1 300px;
+
+            max-width: 380px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            position: relative;
+
+            border-radius: 1.5rem;
+
+            overflow: hidden;
+
+        }
+
+
+        .portfolio-box img {
+
+            width: 100%;
+
+            height: 240px;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =====================================================
            FOOTER CENTER
         ===================================================== */
 
@@ -1003,7 +1052,7 @@
             data-aos="fade-left">
 
 
-            <a href="https://github.com/code-with-karthick"
+            <a href="https://github.com/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener">
 
@@ -1012,7 +1061,7 @@
             </a>
 
 
-            <a href="https://www.linkedin.com/in/karthick-raja-465380431"
+            <a href="https://www.linkedin.com/in/YOUR_PROFILE/"
                 target="_blank"
                 rel="noopener">
 
@@ -1683,27 +1732,27 @@
             </div>
 
 
-            <!-- PROJECT 3 - Driver Drowsiness Detection -->
+            <!-- PROJECT 3 - Driver Drowsiness Monitoring System -->
             <div class="portfolio-box"
                 data-aos="zoom-in"
                 data-aos-delay="300">
 
-                <img src="images/drowsiness-detection.jpg"
-                    alt="Driver Drowsiness Detection System">
+                <img src="images/driver-drowsiness.jpg"
+                    alt="Driver Drowsiness Monitoring System">
 
                 <div class="portfolio-layer">
 
-                    <h4>Driver Drowsiness Detection</h4>
+                    <h4>Driver Drowsiness Monitoring</h4>
 
                     <p>
-                        Real-time computer vision system using OpenCV and Deep Learning 
-                        to detect driver fatigue and prevent accidents by sounding an alert.
+                        Computer vision-based real-time facial landmark 
+                        detection system to prevent driver fatigue and accidents.
                     </p>
 
-                    <a href="https://code-with-karthick.github.io/driver-drowsiness-detection/"
+                    <a href="#"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="Open Driver Drowsiness Detection">
+                        title="Open Driver Drowsiness Monitoring">
 
                         <i class="bx bx-link-external"></i>
 
