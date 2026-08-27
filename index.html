@@ -562,12 +562,22 @@
 
 
         /* =====================================================
-           EDUCATION HORIZONTAL CARDS LAYOUT
+           EDUCATION HORIZONTAL EQUAL CARDS + ANIMATED CENTER LINE
         ===================================================== */
 
         .education-row .education-column {
 
             width: 100%;
+
+        }
+
+
+        .education-column .title {
+
+            text-align: center;
+
+            margin-bottom: 2.5rem;
+
         }
 
 
@@ -577,15 +587,74 @@
 
             flex-direction: row;
 
-            gap: 2.5rem;
+            gap: 3.5rem;
 
             justify-content: center;
 
             align-items: stretch;
 
+            position: relative;
+
             border-left: none;
 
             padding-left: 0;
+
+            max-width: 950px;
+
+            margin: 0 auto;
+
+        }
+
+
+        /* CENTER ANIMATED LINE */
+
+        .education-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 3px;
+
+            height: 85%;
+
+            background: linear-gradient(
+                180deg,
+                #9b5cff,
+                #ff4fc3,
+                #55e8ff,
+                #9b5cff
+            );
+
+            background-size: 100% 300%;
+
+            animation: timelineLineGlow 4s linear infinite;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 0 12px rgba(155, 92, 255, 0.8),
+                0 0 20px rgba(255, 79, 195, 0.6);
+
+        }
+
+
+        @keyframes timelineLineGlow {
+
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0% 100%;
+            }
+
         }
 
 
@@ -593,9 +662,12 @@
 
             flex: 1;
 
-            max-width: 450px;
+            display: flex;
+
+            flex-direction: column;
 
             position: relative;
+
         }
 
 
@@ -606,22 +678,36 @@
         }
 
 
+        .education-content .content {
+
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+        }
+
+
         @media (max-width: 768px) {
 
             .education-box {
 
                 flex-direction: column;
 
-                align-items: center;
+                gap: 2rem;
+
             }
 
 
-            .education-content {
+            .education-box::before {
 
-                width: 100%;
+                display: none;
 
-                max-width: 100%;
             }
+
         }
 
 
@@ -640,6 +726,7 @@
             flex-wrap: wrap;
 
             gap: 2.5rem;
+
         }
 
 
@@ -658,6 +745,7 @@
             border-radius: 1.5rem;
 
             overflow: hidden;
+
         }
 
 
@@ -668,6 +756,7 @@
             height: 240px;
 
             object-fit: cover;
+
         }
 
 
@@ -692,6 +781,7 @@
             padding: 20px 60px 20px 20px;
 
             box-sizing: border-box;
+
         }
 
 
@@ -700,6 +790,7 @@
             width: 100%;
 
             text-align: center;
+
         }
 
 
@@ -708,6 +799,7 @@
             margin: 0;
 
             text-align: center;
+
         }
 
 
@@ -721,6 +813,7 @@
 
             transform:
                 translateY(-50%);
+
         }
 
 
@@ -731,6 +824,7 @@
             align-items: center;
 
             justify-content: center;
+
         }
 
 
@@ -741,6 +835,7 @@
             height: 40px;
 
             object-fit: contain;
+
         }
 
 
@@ -750,6 +845,7 @@
 
                 padding:
                     15px 55px 15px 15px;
+
             }
 
 
@@ -760,12 +856,14 @@
                 line-height: 1.5;
 
                 text-align: center;
+
             }
 
 
             .footer-iconTop {
 
                 right: 10px;
+
             }
 
 
@@ -774,7 +872,9 @@
                 width: 35px;
 
                 height: 35px;
+
             }
+
         }
 
     </style>
@@ -1073,7 +1173,7 @@
             </a>
 
 
-            <a href="https://www.linkedin.com/in/karthick-raja-465380431"
+            <a href="https://www.linkedin.com/in/karthickraja-r"
                 target="_blank"
                 rel="noopener">
 
@@ -1200,11 +1300,10 @@
 
             <!-- ================= EDUCATION ================= -->
 
-            <div class="education-column"
-                data-aos="fade-up">
+            <div class="education-column">
 
 
-                <h3 class="title">
+                <h3 class="title" data-aos="fade-up">
                     Education
                 </h3>
 
@@ -1214,31 +1313,34 @@
 
                     <!-- ================= MCA ================= -->
 
-                    <div class="education-content">
+                    <div class="education-content" data-aos="fade-right">
 
                         <div class="content">
 
+                            <div>
 
-                            <div class="year">
+                                <div class="year">
 
-                                <i class="bx bxs-calendar"></i>
+                                    <i class="bx bxs-calendar"></i>
 
-                                2022 - 2024
+                                    2022 - 2024
+
+                                </div>
+
+
+                                <h3>
+                                    Master of Computer Applications (MCA)
+                                </h3>
+
+
+                                <p>
+
+                                    Alagappa University,
+                                    Karaikudi, Tamil Nadu, India
+
+                                </p>
 
                             </div>
-
-
-                            <h3>
-                                Master of Computer Applications (MCA)
-                            </h3>
-
-
-                            <p>
-
-                                Alagappa University,
-                                Karaikudi, Tamil Nadu, India
-
-                            </p>
 
 
                             <p>
@@ -1257,30 +1359,33 @@
 
                     <!-- ================= BSC ================= -->
 
-                    <div class="education-content">
+                    <div class="education-content" data-aos="fade-left">
 
                         <div class="content">
 
+                            <div>
 
-                            <div class="year">
+                                <div class="year">
 
-                                <i class="bx bxs-calendar"></i>
+                                    <i class="bx bxs-calendar"></i>
 
-                                2019 - 2022
+                                    2019 - 2022
+
+                                </div>
+
+
+                                <h3>
+                                    B.Sc. Computer Science
+                                </h3>
+
+
+                                <p>
+
+                                    Madurai Kamaraj University
+
+                                </p>
 
                             </div>
-
-
-                            <h3>
-                                B.Sc. Computer Science
-                            </h3>
-
-
-                            <p>
-
-                                Madurai Kamaraj University
-
-                            </p>
 
 
                             <p>
