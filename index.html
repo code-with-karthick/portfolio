@@ -116,6 +116,38 @@
         }
 
         /* =====================================================
+           HORIZONTAL EDUCATION CARDS FIX
+        ===================================================== */
+
+        .education-row {
+            width: 100%;
+        }
+
+        .education-column {
+            width: 100%;
+        }
+
+        .education-box {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center;
+            align-items: stretch;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .education-content {
+            flex: 1 1 45%;
+            margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .education-box {
+                flex-direction: column !important;
+            }
+        }
+
+        /* =====================================================
            COMPACT GLASS HEADER
         ===================================================== */
 
