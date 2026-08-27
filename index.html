@@ -3,6 +3,8 @@
 
 <head>
 
+    <!-- ================= GOOGLE ANALYTICS ================= -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN7KK1K7SL"></script>
 
     <script>
@@ -16,6 +18,8 @@
         gtag('config', 'G-TN7KK1K7SL');
     </script>
 
+
+    <!-- ================= META ================= -->
 
     <meta charset="UTF-8">
 
@@ -41,6 +45,8 @@
         content="KARTHICK RAJA R">
 
 
+    <!-- ================= OPEN GRAPH ================= -->
+
     <meta property="og:title"
         content="KARTHICK RAJA R | Python & Django Developer">
 
@@ -51,45 +57,62 @@
         content="images/joo.png">
 
 
+    <!-- ================= TITLE ================= -->
+
     <title>
         KARTHICKRAJA | Python & Django Developer
     </title>
 
+
+    <!-- ================= FAVICON ================= -->
 
     <link rel="shortcut icon"
         type="image/x-icon"
         href="karthick logo.png">
 
 
+    <!-- ================= MAIN CSS ================= -->
+
     <link rel="stylesheet"
         href="css/style.css">
 
+
+    <!-- ================= BOXICONS ================= -->
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet">
 
 
+    <!-- ================= AOS ================= -->
+
     <link rel="stylesheet"
         href="https://unpkg.com/aos@next/dist/aos.css">
 
+
+    <!-- ================= GOOGLE FONTS ================= -->
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&family=Kaushan+Script&display=swap">
 
 
+    <!-- =====================================================
+         CUSTOM HEADER / LOGO / FOOTER / PORTFOLIO CSS
+    ====================================================== -->
+
     <style>
 
         /* =====================================================
-           SECTION & HEADING SPACING ADJUSTMENTS
+           REMOVE VERTICAL SPACING & TIGHTEN SECTIONS
         ===================================================== */
 
         section {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: auto !important;
         }
 
         .heading {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem !important;
         }
 
         /* =====================================================
@@ -553,7 +576,7 @@
 
 
         /* =====================================================
-           PORTFOLIO / PROJECTS ENLARGED 2-PER-ROW FIX
+           3 CARDS IN 1 ROW (INCREASED SIZE & EXPANDED HORIZONTALLY)
         ===================================================== */
 
         .portfolio-container {
@@ -564,17 +587,21 @@
 
             align-items: stretch;
 
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Forces all 3 cards onto 1 row */
 
-            gap: 3rem;
+            gap: 2rem;
+
+            width: 100%;
+
+            padding: 0 2%;
         }
 
 
         .portfolio-box {
 
-            flex: 1 1 450px;
+            flex: 1 1 32%;
 
-            max-width: 540px;
+            max-width: none;
 
             display: flex;
 
@@ -585,6 +612,14 @@
             border-radius: 1.5rem;
 
             overflow: hidden;
+
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-box:hover {
+
+            transform: translateY(-8px);
+
         }
 
 
@@ -592,9 +627,35 @@
 
             width: 100%;
 
-            height: 320px;
+            height: 280px;
 
             object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+
+            .portfolio-container {
+
+                flex-wrap: wrap;
+
+            }
+
+            .portfolio-box {
+
+                flex: 1 1 45%;
+
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .portfolio-box {
+
+                flex: 1 1 100%;
+
+            }
+
         }
 
 
@@ -712,8 +773,12 @@
 <body>
 
 
+    <!-- ================= PRELOADER ================= -->
+
     <div id="preloader"></div>
 
+
+    <!-- ================= AUDIO ================= -->
 
     <audio loop
         id="audioPlayer"
@@ -733,8 +798,14 @@
 
 
 
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
     <header class="header">
 
+
+        <!-- ================= LOGO ================= -->
 
         <a href="#home"
             class="logo">
@@ -754,6 +825,8 @@
         </a>
 
 
+        <!-- ================= MOBILE MENU ================= -->
+
         <div class="bx bx-menu"
             id="menu-icon">
 
@@ -763,6 +836,8 @@
 
         </div>
 
+
+        <!-- ================= NAVIGATION ================= -->
 
         <nav class="navbar">
 
@@ -802,6 +877,10 @@
     </header>
 
 
+
+    <!-- =====================================================
+         HOME
+    ====================================================== -->
 
     <section class="home show-animate"
         id="home">
@@ -857,8 +936,12 @@
             </p>
 
 
+            <!-- ================= BUTTONS ================= -->
+
             <div class="btn-box">
 
+
+                <!-- HIRE ME -->
 
                 <a href="mailto:karthickraja432001@gmail.com"
                     class="btn">
@@ -867,6 +950,8 @@
 
                 </a>
 
+
+                <!-- VIEW PROJECTS -->
 
                 <a href="#portfolio"
                     class="btn">
@@ -880,6 +965,8 @@
                     style="--i:5;">
                 </span>
 
+
+                <!-- ================= AUDIO ================= -->
 
                 <input type="checkbox"
                     id="checkboxInput">
@@ -959,6 +1046,8 @@
 
 
 
+        <!-- ================= SOCIAL LINKS ================= -->
+
         <div class="home-sci"
             data-aos="fade-left">
 
@@ -1004,6 +1093,10 @@
     </section>
 
 
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
 
     <section class="about"
         id="about">
@@ -1068,6 +1161,10 @@
 
 
 
+    <!-- =====================================================
+         EDUCATION
+    ====================================================== -->
+
     <section class="education"
         id="education">
 
@@ -1089,6 +1186,8 @@
         <div class="education-row">
 
 
+            <!-- ================= EDUCATION ================= -->
+
             <div class="education-column"
                 data-aos="fade-right">
 
@@ -1100,6 +1199,8 @@
 
                 <div class="education-box">
 
+
+                    <!-- ================= MCA ================= -->
 
                     <div class="education-content">
 
@@ -1141,6 +1242,8 @@
                     </div>
 
 
+
+                    <!-- ================= BSC ================= -->
 
                     <div class="education-content">
 
@@ -1192,6 +1295,10 @@
 
 
 
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
     <section class="skills"
         id="skills">
 
@@ -1213,6 +1320,8 @@
         <div class="skills-row">
 
 
+            <!-- ================= PROGRAMMING ================= -->
+
             <div class="skills-column"
                 data-aos="fade-right">
 
@@ -1226,6 +1335,8 @@
 
                     <div class="skills-content">
 
+
+                        <!-- PYTHON -->
 
                         <div class="progress">
 
@@ -1241,6 +1352,8 @@
                         </div>
 
 
+                        <!-- HTML -->
+
                         <div class="progress">
 
                             <h3>
@@ -1254,6 +1367,8 @@
 
                         </div>
 
+
+                        <!-- CSS -->
 
                         <div class="progress">
 
@@ -1269,6 +1384,8 @@
                         </div>
 
 
+                        <!-- JAVASCRIPT -->
+
                         <div class="progress">
 
                             <h3>
@@ -1282,6 +1399,8 @@
 
                         </div>
 
+
+                        <!-- REACT -->
 
                         <div class="progress">
 
@@ -1305,6 +1424,8 @@
 
 
 
+            <!-- ================= BACKEND ================= -->
+
             <div class="skills-column"
                 data-aos="fade-left">
 
@@ -1318,6 +1439,8 @@
 
                     <div class="skills-content">
 
+
+                        <!-- DJANGO -->
 
                         <div class="progress">
 
@@ -1333,6 +1456,8 @@
                         </div>
 
 
+                        <!-- MYSQL -->
+
                         <div class="progress">
 
                             <h3>
@@ -1346,6 +1471,8 @@
 
                         </div>
 
+
+                        <!-- JAVA -->
 
                         <div class="progress">
 
@@ -1361,6 +1488,8 @@
                         </div>
 
 
+                        <!-- C / C++ -->
+
                         <div class="progress">
 
                             <h3>
@@ -1374,6 +1503,8 @@
 
                         </div>
 
+
+                        <!-- GIT -->
 
                         <div class="progress">
 
@@ -1402,6 +1533,10 @@
 
 
 
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
     <section class="portfolio"
         id="portfolio">
 
@@ -1417,6 +1552,10 @@
 
         <div class="portfolio-container">
 
+
+            <!-- =================================================
+                 PROJECT 1 - KARTHI MART
+            ================================================== -->
 
             <div class="portfolio-box"
                 data-aos="zoom-in"
@@ -1462,6 +1601,10 @@
 
 
 
+            <!-- =================================================
+                 PROJECT 2 - STUDENT MANAGEMENT SYSTEM
+            ================================================== -->
+
             <div class="portfolio-box"
                 data-aos="zoom-in"
                 data-aos-delay="200">
@@ -1504,6 +1647,10 @@
             </div>
 
 
+
+            <!-- =================================================
+                 PROJECT 3 - DRIVER DROWSINESS
+            ================================================== -->
 
             <div class="portfolio-box"
                 data-aos="zoom-in"
@@ -1553,6 +1700,10 @@
 
 
 
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
     <section class="contact"
         id="contact">
 
@@ -1575,36 +1726,50 @@
 
 
 
+        <!-- ================= FORMSUBMIT ================= -->
+
         <form
             action="https://formsubmit.co/karthickraja432001@gmail.com"
             method="POST"
             data-aos="fade-up">
 
 
+            <!-- EMAIL SUBJECT -->
+
             <input type="hidden"
                 name="_subject"
                 value="New Portfolio Contact - Karthick Raja">
 
+
+            <!-- EMAIL TEMPLATE -->
 
             <input type="hidden"
                 name="_template"
                 value="table">
 
 
+            <!-- REPLY TO VISITOR -->
+
             <input type="hidden"
                 name="_replyto"
                 value="">
 
+
+            <!-- SPAM CAPTCHA -->
 
             <input type="hidden"
                 name="_captcha"
                 value="true">
 
 
+            <!-- HONEYPOT -->
+
             <input type="text"
                 name="_honey"
                 style="display:none">
 
+
+            <!-- ================= NAME + EMAIL ================= -->
 
             <div class="input-box">
 
@@ -1639,6 +1804,8 @@
 
 
 
+            <!-- ================= MOBILE + SUBJECT ================= -->
+
             <div class="input-box">
 
 
@@ -1671,6 +1838,8 @@
 
 
 
+            <!-- ================= MESSAGE ================= -->
+
             <div class="textarea-field">
 
 
@@ -1688,6 +1857,8 @@
             </div>
 
 
+
+            <!-- ================= SEND ================= -->
 
             <div class="btn-box btns">
 
@@ -1710,6 +1881,10 @@
 
 
 
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="footer">
 
 
@@ -1723,6 +1898,8 @@
 
         <div class="footer-foreground">
 
+
+            <!-- ================= QUOTE ================= -->
 
             <div class="footer-quote">
 
@@ -1762,6 +1939,8 @@
 
 
 
+            <!-- ================= AVATAR ================= -->
+
             <div class="footer-avatar-container">
 
 
@@ -1794,6 +1973,8 @@
 
 
 
+            <!-- ================= FOOTER BOTTOM ================= -->
+
             <div class="footer-bottom">
 
 
@@ -1819,6 +2000,8 @@
                 </div>
 
 
+
+                <!-- ================= ROCKET ================= -->
 
                 <div class="footer-iconTop">
 
@@ -1848,8 +2031,14 @@
 
 
 
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="js/script.js"></script>
 
+
+    <!-- ================= AOS ================= -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
