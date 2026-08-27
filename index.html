@@ -96,13 +96,13 @@
 
 
     <!-- =====================================================
-         MASTER SCROLL FIX & COMPONENT STYLES
+         MASTER FIX: SCROLL & SECTION OVERLAP SOLUTION
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           FORCE ENABLE SCROLLING & FIX OVERFLOW LOCKS
+           FORCE ENABLE VERTICAL SCROLL & REMOVE HEIGHT LOCKS
         ===================================================== */
 
         html {
@@ -120,32 +120,49 @@
             position: relative !important;
         }
 
+        /* Prevent sections from overlapping each other */
         section {
+            position: relative !important;
+            display: block !important;
+            clear: both !important;
             height: auto !important;
-            min-height: auto !important;
-            padding-top: 5rem !important;
-            padding-bottom: 5rem !important;
+            min-height: fit-content !important;
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+            overflow: visible !important;
         }
 
-        /* Prevent Preloader overlay from locking user scrolling touch events */
+        /* Prevent Preloader overlay from blocking clicks or scroll */
         #preloader {
             pointer-events: none !important;
         }
 
         .heading {
-            margin-bottom: 2rem !important;
+            margin-bottom: 2.5rem !important;
         }
 
         /* =====================================================
-           EDUCATION CARDS LAYOUT
+           EDUCATION SECTION FIX (REMOVED OVERLAP)
         ===================================================== */
 
+        .education {
+            position: relative !important;
+            height: auto !important;
+            min-height: auto !important;
+            display: block !important;
+            clear: both !important;
+        }
+
         .education-row {
-            width: 100%;
+            width: 100% !important;
+            height: auto !important;
+            position: relative !important;
         }
 
         .education-column {
-            width: 100%;
+            width: 100% !important;
+            height: auto !important;
+            position: relative !important;
         }
 
         .education-box {
@@ -154,12 +171,16 @@
             justify-content: center;
             align-items: stretch;
             gap: 2rem;
-            width: 100%;
+            width: 100% !important;
+            height: auto !important;
+            position: relative !important;
         }
 
         .education-content {
-            flex: 1 1 45%;
+            flex: 1 1 45% !important;
             margin-bottom: 0 !important;
+            height: auto !important;
+            position: relative !important;
         }
 
         @media (max-width: 768px) {
@@ -785,10 +806,11 @@
             offset: 100
         });
 
-        /* EXTRA SAFETY JS FOR UNLOCKING BODY OVERFLOW ON LOAD */
+        // FORCE UNLOCK OVERFLOW & RE-LAYOUT SECTIONS
         window.addEventListener('load', function() {
             document.documentElement.style.overflowY = 'scroll';
             document.body.style.overflow = 'visible';
+            window.dispatchEvent(new Event('resize'));
         });
     </script>
 
