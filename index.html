@@ -562,6 +562,70 @@
 
 
         /* =====================================================
+           EDUCATION HORIZONTAL CARDS LAYOUT
+        ===================================================== */
+
+        .education-row .education-column {
+
+            width: 100%;
+        }
+
+
+        .education-box {
+
+            display: flex;
+
+            flex-direction: row;
+
+            gap: 2.5rem;
+
+            justify-content: center;
+
+            align-items: stretch;
+
+            border-left: none;
+
+            padding-left: 0;
+        }
+
+
+        .education-content {
+
+            flex: 1;
+
+            max-width: 450px;
+
+            position: relative;
+        }
+
+
+        .education-content::before {
+
+            display: none;
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .education-box {
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+
+            .education-content {
+
+                width: 100%;
+
+                max-width: 100%;
+            }
+        }
+
+
+        /* =====================================================
            PORTFOLIO / PROJECTS EQUAL SIZE FIX
         ===================================================== */
 
@@ -1009,7 +1073,7 @@
             </a>
 
 
-            <a href="https://www.linkedin.com/in/karthickraja-r"
+            <a href="https://www.linkedin.com/in/karthick-raja-465380431"
                 target="_blank"
                 rel="noopener">
 
@@ -1137,7 +1201,7 @@
             <!-- ================= EDUCATION ================= -->
 
             <div class="education-column"
-                data-aos="fade-right">
+                data-aos="fade-up">
 
 
                 <h3 class="title">
