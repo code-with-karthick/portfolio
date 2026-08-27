@@ -3,8 +3,6 @@
 
 <head>
 
-    <!-- ================= GOOGLE ANALYTICS ================= -->
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN7KK1K7SL"></script>
 
     <script>
@@ -18,8 +16,6 @@
         gtag('config', 'G-TN7KK1K7SL');
     </script>
 
-
-    <!-- ================= META ================= -->
 
     <meta charset="UTF-8">
 
@@ -45,8 +41,6 @@
         content="KARTHICK RAJA R">
 
 
-    <!-- ================= OPEN GRAPH ================= -->
-
     <meta property="og:title"
         content="KARTHICK RAJA R | Python & Django Developer">
 
@@ -57,49 +51,46 @@
         content="images/joo.png">
 
 
-    <!-- ================= TITLE ================= -->
-
     <title>
         KARTHICKRAJA | Python & Django Developer
     </title>
 
-
-    <!-- ================= FAVICON ================= -->
 
     <link rel="shortcut icon"
         type="image/x-icon"
         href="karthick logo.png">
 
 
-    <!-- ================= MAIN CSS ================= -->
-
     <link rel="stylesheet"
         href="css/style.css">
 
-
-    <!-- ================= BOXICONS ================= -->
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet">
 
 
-    <!-- ================= AOS ================= -->
-
     <link rel="stylesheet"
         href="https://unpkg.com/aos@next/dist/aos.css">
 
-
-    <!-- ================= GOOGLE FONTS ================= -->
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&family=Kaushan+Script&display=swap">
 
 
-    <!-- =====================================================
-         CUSTOM HEADER / LOGO / FOOTER / PORTFOLIO CSS
-    ====================================================== -->
-
     <style>
+
+        /* =====================================================
+           SECTION & HEADING SPACING ADJUSTMENTS
+        ===================================================== */
+
+        section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .heading {
+            margin-bottom: 2rem;
+        }
 
         /* =====================================================
            COMPACT GLASS HEADER
@@ -562,157 +553,7 @@
 
 
         /* =====================================================
-           EDUCATION HORIZONTAL EQUAL CARDS + ANIMATED CENTER LINE
-        ===================================================== */
-
-        .education-row .education-column {
-
-            width: 100%;
-
-        }
-
-
-        .education-column .title {
-
-            text-align: center;
-
-            margin-bottom: 2.5rem;
-
-        }
-
-
-        .education-box {
-
-            display: flex;
-
-            flex-direction: row;
-
-            gap: 3.5rem;
-
-            justify-content: center;
-
-            align-items: stretch;
-
-            position: relative;
-
-            border-left: none;
-
-            padding-left: 0;
-
-            max-width: 950px;
-
-            margin: 0 auto;
-
-        }
-
-
-        /* CENTER ANIMATED LINE */
-
-        .education-box::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-
-            top: 50%;
-
-            transform: translate(-50%, -50%);
-
-            width: 3px;
-
-            height: 85%;
-
-            background: linear-gradient(
-                180deg,
-                #9b5cff,
-                #ff4fc3,
-                #55e8ff,
-                #9b5cff
-            );
-
-            background-size: 100% 300%;
-
-            animation: timelineLineGlow 4s linear infinite;
-
-            border-radius: 10px;
-
-            box-shadow:
-                0 0 12px rgba(155, 92, 255, 0.8),
-                0 0 20px rgba(255, 79, 195, 0.6);
-
-        }
-
-
-        @keyframes timelineLineGlow {
-
-            0% {
-                background-position: 0% 0%;
-            }
-
-            100% {
-                background-position: 0% 100%;
-            }
-
-        }
-
-
-        .education-content {
-
-            flex: 1;
-
-            display: flex;
-
-            flex-direction: column;
-
-            position: relative;
-
-        }
-
-
-        .education-content::before {
-
-            display: none;
-
-        }
-
-
-        .education-content .content {
-
-            flex: 1;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .education-box {
-
-                flex-direction: column;
-
-                gap: 2rem;
-
-            }
-
-
-            .education-box::before {
-
-                display: none;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           PORTFOLIO / PROJECTS EQUAL SIZE FIX
+           PORTFOLIO / PROJECTS ENLARGED 2-PER-ROW FIX
         ===================================================== */
 
         .portfolio-container {
@@ -725,16 +566,15 @@
 
             flex-wrap: wrap;
 
-            gap: 2.5rem;
-
+            gap: 3rem;
         }
 
 
         .portfolio-box {
 
-            flex: 1 1 300px;
+            flex: 1 1 450px;
 
-            max-width: 380px;
+            max-width: 540px;
 
             display: flex;
 
@@ -745,7 +585,6 @@
             border-radius: 1.5rem;
 
             overflow: hidden;
-
         }
 
 
@@ -753,10 +592,9 @@
 
             width: 100%;
 
-            height: 240px;
+            height: 320px;
 
             object-fit: cover;
-
         }
 
 
@@ -781,7 +619,6 @@
             padding: 20px 60px 20px 20px;
 
             box-sizing: border-box;
-
         }
 
 
@@ -790,7 +627,6 @@
             width: 100%;
 
             text-align: center;
-
         }
 
 
@@ -799,7 +635,6 @@
             margin: 0;
 
             text-align: center;
-
         }
 
 
@@ -813,7 +648,6 @@
 
             transform:
                 translateY(-50%);
-
         }
 
 
@@ -824,7 +658,6 @@
             align-items: center;
 
             justify-content: center;
-
         }
 
 
@@ -835,7 +668,6 @@
             height: 40px;
 
             object-fit: contain;
-
         }
 
 
@@ -845,7 +677,6 @@
 
                 padding:
                     15px 55px 15px 15px;
-
             }
 
 
@@ -856,14 +687,12 @@
                 line-height: 1.5;
 
                 text-align: center;
-
             }
 
 
             .footer-iconTop {
 
                 right: 10px;
-
             }
 
 
@@ -872,9 +701,7 @@
                 width: 35px;
 
                 height: 35px;
-
             }
-
         }
 
     </style>
@@ -885,12 +712,8 @@
 <body>
 
 
-    <!-- ================= PRELOADER ================= -->
-
     <div id="preloader"></div>
 
-
-    <!-- ================= AUDIO ================= -->
 
     <audio loop
         id="audioPlayer"
@@ -910,14 +733,8 @@
 
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
     <header class="header">
 
-
-        <!-- ================= LOGO ================= -->
 
         <a href="#home"
             class="logo">
@@ -937,8 +754,6 @@
         </a>
 
 
-        <!-- ================= MOBILE MENU ================= -->
-
         <div class="bx bx-menu"
             id="menu-icon">
 
@@ -948,8 +763,6 @@
 
         </div>
 
-
-        <!-- ================= NAVIGATION ================= -->
 
         <nav class="navbar">
 
@@ -989,10 +802,6 @@
     </header>
 
 
-
-    <!-- =====================================================
-         HOME
-    ====================================================== -->
 
     <section class="home show-animate"
         id="home">
@@ -1048,12 +857,8 @@
             </p>
 
 
-            <!-- ================= BUTTONS ================= -->
-
             <div class="btn-box">
 
-
-                <!-- HIRE ME -->
 
                 <a href="mailto:karthickraja432001@gmail.com"
                     class="btn">
@@ -1062,8 +867,6 @@
 
                 </a>
 
-
-                <!-- VIEW PROJECTS -->
 
                 <a href="#portfolio"
                     class="btn">
@@ -1077,8 +880,6 @@
                     style="--i:5;">
                 </span>
 
-
-                <!-- ================= AUDIO ================= -->
 
                 <input type="checkbox"
                     id="checkboxInput">
@@ -1158,8 +959,6 @@
 
 
 
-        <!-- ================= SOCIAL LINKS ================= -->
-
         <div class="home-sci"
             data-aos="fade-left">
 
@@ -1205,10 +1004,6 @@
     </section>
 
 
-
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
 
     <section class="about"
         id="about">
@@ -1273,10 +1068,6 @@
 
 
 
-    <!-- =====================================================
-         EDUCATION
-    ====================================================== -->
-
     <section class="education"
         id="education">
 
@@ -1298,12 +1089,11 @@
         <div class="education-row">
 
 
-            <!-- ================= EDUCATION ================= -->
+            <div class="education-column"
+                data-aos="fade-right">
 
-            <div class="education-column">
 
-
-                <h3 class="title" data-aos="fade-up">
+                <h3 class="title">
                     Education
                 </h3>
 
@@ -1311,36 +1101,31 @@
                 <div class="education-box">
 
 
-                    <!-- ================= MCA ================= -->
-
-                    <div class="education-content" data-aos="fade-right">
+                    <div class="education-content">
 
                         <div class="content">
 
-                            <div>
 
-                                <div class="year">
+                            <div class="year">
 
-                                    <i class="bx bxs-calendar"></i>
+                                <i class="bx bxs-calendar"></i>
 
-                                    2022 - 2024
-
-                                </div>
-
-
-                                <h3>
-                                    Master of Computer Applications (MCA)
-                                </h3>
-
-
-                                <p>
-
-                                    Alagappa University,
-                                    Karaikudi, Tamil Nadu, India
-
-                                </p>
+                                2022 - 2024
 
                             </div>
+
+
+                            <h3>
+                                Master of Computer Applications (MCA)
+                            </h3>
+
+
+                            <p>
+
+                                Alagappa University,
+                                Karaikudi, Tamil Nadu, India
+
+                            </p>
 
 
                             <p>
@@ -1357,35 +1142,30 @@
 
 
 
-                    <!-- ================= BSC ================= -->
-
-                    <div class="education-content" data-aos="fade-left">
+                    <div class="education-content">
 
                         <div class="content">
 
-                            <div>
 
-                                <div class="year">
+                            <div class="year">
 
-                                    <i class="bx bxs-calendar"></i>
+                                <i class="bx bxs-calendar"></i>
 
-                                    2019 - 2022
-
-                                </div>
-
-
-                                <h3>
-                                    B.Sc. Computer Science
-                                </h3>
-
-
-                                <p>
-
-                                    Madurai Kamaraj University
-
-                                </p>
+                                2019 - 2022
 
                             </div>
+
+
+                            <h3>
+                                B.Sc. Computer Science
+                            </h3>
+
+
+                            <p>
+
+                                Madurai Kamaraj University
+
+                            </p>
 
 
                             <p>
@@ -1412,10 +1192,6 @@
 
 
 
-    <!-- =====================================================
-         SKILLS
-    ====================================================== -->
-
     <section class="skills"
         id="skills">
 
@@ -1437,8 +1213,6 @@
         <div class="skills-row">
 
 
-            <!-- ================= PROGRAMMING ================= -->
-
             <div class="skills-column"
                 data-aos="fade-right">
 
@@ -1452,8 +1226,6 @@
 
                     <div class="skills-content">
 
-
-                        <!-- PYTHON -->
 
                         <div class="progress">
 
@@ -1469,8 +1241,6 @@
                         </div>
 
 
-                        <!-- HTML -->
-
                         <div class="progress">
 
                             <h3>
@@ -1484,8 +1254,6 @@
 
                         </div>
 
-
-                        <!-- CSS -->
 
                         <div class="progress">
 
@@ -1501,8 +1269,6 @@
                         </div>
 
 
-                        <!-- JAVASCRIPT -->
-
                         <div class="progress">
 
                             <h3>
@@ -1516,8 +1282,6 @@
 
                         </div>
 
-
-                        <!-- REACT -->
 
                         <div class="progress">
 
@@ -1541,8 +1305,6 @@
 
 
 
-            <!-- ================= BACKEND ================= -->
-
             <div class="skills-column"
                 data-aos="fade-left">
 
@@ -1556,8 +1318,6 @@
 
                     <div class="skills-content">
 
-
-                        <!-- DJANGO -->
 
                         <div class="progress">
 
@@ -1573,8 +1333,6 @@
                         </div>
 
 
-                        <!-- MYSQL -->
-
                         <div class="progress">
 
                             <h3>
@@ -1588,8 +1346,6 @@
 
                         </div>
 
-
-                        <!-- JAVA -->
 
                         <div class="progress">
 
@@ -1605,8 +1361,6 @@
                         </div>
 
 
-                        <!-- C / C++ -->
-
                         <div class="progress">
 
                             <h3>
@@ -1620,8 +1374,6 @@
 
                         </div>
 
-
-                        <!-- GIT -->
 
                         <div class="progress">
 
@@ -1650,10 +1402,6 @@
 
 
 
-    <!-- =====================================================
-         PROJECTS
-    ====================================================== -->
-
     <section class="portfolio"
         id="portfolio">
 
@@ -1669,10 +1417,6 @@
 
         <div class="portfolio-container">
 
-
-            <!-- =================================================
-                 PROJECT 1 - KARTHI MART
-            ================================================== -->
 
             <div class="portfolio-box"
                 data-aos="zoom-in"
@@ -1718,10 +1462,6 @@
 
 
 
-            <!-- =================================================
-                 PROJECT 2 - STUDENT MANAGEMENT SYSTEM
-            ================================================== -->
-
             <div class="portfolio-box"
                 data-aos="zoom-in"
                 data-aos-delay="200">
@@ -1764,10 +1504,6 @@
             </div>
 
 
-
-            <!-- =================================================
-                 PROJECT 3 - DRIVER DROWSINESS
-            ================================================== -->
 
             <div class="portfolio-box"
                 data-aos="zoom-in"
@@ -1817,10 +1553,6 @@
 
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-
     <section class="contact"
         id="contact">
 
@@ -1843,50 +1575,36 @@
 
 
 
-        <!-- ================= FORMSUBMIT ================= -->
-
         <form
             action="https://formsubmit.co/karthickraja432001@gmail.com"
             method="POST"
             data-aos="fade-up">
 
 
-            <!-- EMAIL SUBJECT -->
-
             <input type="hidden"
                 name="_subject"
                 value="New Portfolio Contact - Karthick Raja">
 
-
-            <!-- EMAIL TEMPLATE -->
 
             <input type="hidden"
                 name="_template"
                 value="table">
 
 
-            <!-- REPLY TO VISITOR -->
-
             <input type="hidden"
                 name="_replyto"
                 value="">
 
-
-            <!-- SPAM CAPTCHA -->
 
             <input type="hidden"
                 name="_captcha"
                 value="true">
 
 
-            <!-- HONEYPOT -->
-
             <input type="text"
                 name="_honey"
                 style="display:none">
 
-
-            <!-- ================= NAME + EMAIL ================= -->
 
             <div class="input-box">
 
@@ -1921,8 +1639,6 @@
 
 
 
-            <!-- ================= MOBILE + SUBJECT ================= -->
-
             <div class="input-box">
 
 
@@ -1955,8 +1671,6 @@
 
 
 
-            <!-- ================= MESSAGE ================= -->
-
             <div class="textarea-field">
 
 
@@ -1974,8 +1688,6 @@
             </div>
 
 
-
-            <!-- ================= SEND ================= -->
 
             <div class="btn-box btns">
 
@@ -1998,10 +1710,6 @@
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer class="footer">
 
 
@@ -2015,8 +1723,6 @@
 
         <div class="footer-foreground">
 
-
-            <!-- ================= QUOTE ================= -->
 
             <div class="footer-quote">
 
@@ -2056,8 +1762,6 @@
 
 
 
-            <!-- ================= AVATAR ================= -->
-
             <div class="footer-avatar-container">
 
 
@@ -2090,8 +1794,6 @@
 
 
 
-            <!-- ================= FOOTER BOTTOM ================= -->
-
             <div class="footer-bottom">
 
 
@@ -2117,8 +1819,6 @@
                 </div>
 
 
-
-                <!-- ================= ROCKET ================= -->
 
                 <div class="footer-iconTop">
 
@@ -2148,14 +1848,8 @@
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
     <script src="js/script.js"></script>
 
-
-    <!-- ================= AOS ================= -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
