@@ -228,15 +228,11 @@
         .ai-avatar-card {
             width: 220px;
             height: 280px;
-            background: linear-gradient(135deg, rgba(155, 92, 255, 0.15), rgba(255, 79, 195, 0.15));
             border: 2px solid #9b5cff;
             border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 25px rgba(155, 92, 255, 0.4), inset 0 0 15px rgba(255, 79, 195, 0.2);
+            box-shadow: 0 0 25px rgba(155, 92, 255, 0.5), inset 0 0 15px rgba(255, 79, 195, 0.3);
             backdrop-filter: blur(10px);
         }
 
@@ -245,13 +241,31 @@
             height: 100%;
             object-fit: cover;
             border-radius: 18px;
-            opacity: 0.85;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            filter: brightness(0.9) contrast(1.1);
+            transition: transform 0.4s ease, filter 0.4s ease;
         }
 
         .ai-avatar-card:hover .ai-img-visual {
-            opacity: 1;
-            transform: scale(1.05);
+            filter: brightness(1.15) contrast(1.2);
+            transform: scale(1.08);
+        }
+
+        .ai-overlay-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background: rgba(155, 92, 255, 0.85);
+            padding: 6px 14px;
+            border-radius: 12px;
+            border: 1px solid #ff4fc3;
+            box-shadow: 0 0 10px #9b5cff;
+            z-index: 3;
+            white-space: nowrap;
         }
 
         .scan-line {
@@ -259,9 +273,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #55e8ff, transparent);
-            box-shadow: 0 0 15px #55e8ff;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #55e8ff, #ff4fc3, transparent);
+            box-shadow: 0 0 15px #55e8ff, 0 0 10px #ff4fc3;
             animation: scanAnimation 3s ease-in-out infinite;
             z-index: 2;
             pointer-events: none;
@@ -269,7 +283,7 @@
 
         @keyframes scanAnimation {
             0% { top: 0%; opacity: 0.3; }
-            50% { top: 100%; opacity: 1; }
+            50% { top: 98%; opacity: 1; }
             100% { top: 0%; opacity: 0.3; }
         }
 
@@ -282,13 +296,13 @@
         }
 
         @keyframes floatLeft {
-            0%, 100% { transform: translateY(0px) rotate(-2deg); }
-            50% { transform: translateY(-12px) rotate(2deg); }
+            0%, 100% { transform: translateY(0px) rotate(-1.5deg); }
+            50% { transform: translateY(-10px) rotate(1.5deg); }
         }
 
         @keyframes floatRight {
-            0%, 100% { transform: translateY(0px) rotate(2deg); }
-            50% { transform: translateY(-12px) rotate(-2deg); }
+            0%, 100% { transform: translateY(0px) rotate(1.5deg); }
+            50% { transform: translateY(-10px) rotate(-1.5deg); }
         }
 
         @media (max-width: 992px) {
@@ -499,10 +513,11 @@
 
         <div class="education-row">
 
-            <!-- LEFT ANIMATED AI PHOTO CARD -->
+            <!-- LEFT VISUAL: AI NEURAL NETWORK -->
             <div class="ai-avatar-card photo-left" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="AI Visual Left" class="ai-img-visual">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" alt="AI Neural Network Journey" class="ai-img-visual">
                 <div class="scan-line"></div>
+                <div class="ai-overlay-badge">TECH EXPLORER</div>
             </div>
 
             <!-- EDUCATION CARDS CENTER -->
@@ -536,10 +551,11 @@
                 </div>
             </div>
 
-            <!-- RIGHT ANIMATED AI PHOTO CARD -->
+            <!-- RIGHT VISUAL: CYBERSECURITY CODE STREAM -->
             <div class="ai-avatar-card photo-right" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" alt="AI Visual Right" class="ai-img-visual">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity & Code Journey" class="ai-img-visual">
                 <div class="scan-line"></div>
+                <div class="ai-overlay-badge">FUTURE ARCHITECT</div>
             </div>
 
         </div>
