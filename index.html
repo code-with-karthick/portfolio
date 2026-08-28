@@ -86,8 +86,19 @@
             overflow: visible !important;
         }
 
+        /* PRELOADER STYLES */
         #preloader {
-            pointer-events: none !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #080808;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
         }
 
         .heading {
@@ -192,7 +203,7 @@
             cursor: pointer;
         }
 
-        /* HOME SECTION FIX */
+        /* HOME SECTION */
         .home {
             min-height: 100vh !important;
             display: flex !important;
@@ -672,6 +683,23 @@
         menuIcon.onclick = () => {
             navbar.classList.toggle('active');
         };
+
+        // PRELOADER FAST HIDE SCRIPT
+        function hidePreloader() {
+            const preloader = document.getElementById('preloader');
+            if (preloader && preloader.style.display !== 'none') {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        // Hide when page fully loads
+        window.addEventListener('load', hidePreloader);
+
+        // Force hide after max 1.2 seconds regardless of heavy assets
+        setTimeout(hidePreloader, 1200);
     </script>
 </body>
 
